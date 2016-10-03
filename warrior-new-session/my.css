@@ -45,7 +45,7 @@
     font-style: italic;
 
 }
-/*锟斤拷时锟斤拷转锟斤拷*/
+/*逆时针转动*/
 #finals.present .rotating-anti{
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
@@ -108,4 +108,38 @@
 }
 #shake.present .last {
 	opacity: 1;
+}
+
+.music-btn {
+	width: 36px;
+	height: 36px;
+}
+.music-btn-animate {
+	animation: music-rotate 3s infinite linear;
+	-moz-animation: music-rotate 3s infinite linear;;	/* Firefox */
+	-webkit-animation: music-rotate 3s infinite linear;;	/* Safari 和 Chrome */
+	-o-animation: music-rotate 3s infinite linear;;	/* Opera */
+}
+@keyframes music-rotate
+{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(-360deg); }
+}
+
+@-moz-keyframes music-rotate /* Firefox */
+{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(-360deg); }
+}
+
+@-webkit-keyframes music-rotate /* Safari 和 Chrome */
+{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(-360deg); }
+}
+
+@-o-keyframes music-rotate /* Opera */
+{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(-360deg); }
 }
